@@ -41,7 +41,7 @@ body{
 .num{
 width: 14vmin;
 height: 14vmin;
-border: 1px solid orange;
+
 display: flex;
 flex-direction: column;
 justify-content: space-around;
