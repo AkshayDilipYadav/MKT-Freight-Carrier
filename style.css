@@ -53,21 +53,21 @@ border-bottom: 10px solid #8f958fe9;
 }
 
 span.num1 {
-    font-family: monospace;
+    font-family: "Doto";
     color:#ffffff;
     display: grid;
     place-items: center; 
     font-weight: 600;
-    font-size: 3em;
+    font-size: 3.5em;
 }
 
 span.text {
-    font-family: monospace;
+    font-family: "Doto";
     color:#e0e0e0;
-    font-size: 1.1em;
+    font-size: 1.7em;
     text-align: center;
     pad: 0.7em 0;
-    font-weight: 400;
+    font-weight: 600;
     line-height: 0;
 }
 
@@ -165,9 +165,9 @@ header{
 
 .text h1{
     color: white;
-    font-family: monospace;
+    font-family: "Doto";
     white-space: nowrap;
-    letter-spacing: 1px;
+    letter-spacing: 5px;
     overflow: hidden;
    border-right: 5px solid white;
     animation: typing 1.5s steps(17) 1, 
