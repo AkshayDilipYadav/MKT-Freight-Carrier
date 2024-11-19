@@ -1,19 +1,3 @@
-let items = document.querySelectorAll('.allowActive');
-
-let observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        } else {
-            entry.target.classList.remove('active');
-        }
-    });
-}, { threshold: 0.75 }); // 75% of the item should be in view
-
-items.forEach(item => observer.observe(item));
-
-
-
 let valueDisplays = document.querySelectorAll(".num1");
 let interval = 5000;
 
@@ -29,3 +13,5 @@ let counter = setInterval(function () {
     }
 }, duration);
 });
+
+//Number counter

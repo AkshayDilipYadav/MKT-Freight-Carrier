@@ -1,0 +1,47 @@
+#edit-section {
+    background-color: #534f4f;
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: top 0.5s ease-in-out;
+    z-index: 2;
+  }
+  .section{
+      position:relative;
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  .rectangle {
+    position: absolute; /* Position relative to #edit-section */
+    bottom: -60px;          /* Align to bottom */
+    left: 0;            /* Align to left */
+    width: 100vw;
+    height: 60px;
+    background-color: transparent;
+    
+   
+  }
+
+ 
+  .rectangleRight{
+      position: absolute; /* Position relative to #edit-section */
+    bottom: -60px;  
+    right: 0;
+    height: 100px;
+    width: 400px;
+    background-color: #534f4f;
+    border-bottom-left-radius: 70px;
+   
+  }
+.edit-button{
+  margin-top: 50px;
+  margin-left: 50px;;
+}
