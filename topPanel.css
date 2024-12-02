@@ -1,6 +1,6 @@
 #edit-section {
-    background-color: #534f4f;
-    position: fixed;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
     top: -100vh;
     left: 0;
     width: 100%;
@@ -10,14 +10,17 @@
     align-items: center;
     justify-content: center;
     transition: top 0.5s ease-in-out;
-    z-index: 2;
+    z-index: 11;
+opacity: 0.8;
   }
-  .section{
+  .topsection{
       position:relative;
+     
   }
   button {
     padding: 10px 20px;
     font-size: 16px;
+
   }
   .rectangle {
     position: absolute; /* Position relative to #edit-section */
@@ -26,7 +29,6 @@
     width: 100vw;
     height: 60px;
     background-color: transparent;
-    
    
   }
 
@@ -37,11 +39,15 @@
     right: 0;
     height: 100px;
     width: 400px;
-    background-color: #534f4f;
     border-bottom-left-radius: 70px;
-   
+
+    background-color: rgb(255, 255, 255);
+
   }
+ 
 .edit-button{
   margin-top: 50px;
-  margin-left: 50px;;
+  margin-left: 50px;
+  
 }
+
