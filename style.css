@@ -6,6 +6,8 @@ body{
     scroll-behavior: smooth;
 }
 
+
+
 .container-fluid{
     height: 100vh;
     overflow-x: hidden;
@@ -27,19 +29,21 @@ a{
  
 
 .content{
-   
-    position:absolute;
+    text-decoration: none;
+
     
-    font-weight:1000 ;
+    position:absolute;
+    font-size: 55px;
+    
     font-family: "Josefin Sans";
     transform: translateZ(10px);
     transform: translateY(-150px);
     
 }
 .name{
-    text-decoration: none;
+
     color: #e0e0e0;
-    font-size: xxx-large;
+    
     
 }
 
@@ -119,7 +123,7 @@ a{
     position: relative;
     font-size: 16px;
     border-radius: 0.5em;
-    border-bottom: 1px solid #ffb700;
+    border-bottom: 1px solid #fff200;
     }
 
     span.num1 {
