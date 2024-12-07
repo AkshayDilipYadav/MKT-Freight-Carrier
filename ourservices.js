@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     setTimeout(() => {
                         item.classList.add('card'); // Set final card position
                     }, 50); // Ensure animation finishes (matches CSS animation duration)
-                }, index * 100); // Delay each animation
+                }, index * 150); // Delay each animation
             });
         }
     }
