@@ -3,10 +3,12 @@ body{
     background-color: black;
     font-family: "monospace";
     color: white;
-    scroll-behavior: smooth;
+    
 }
 
-
+html {
+    scroll-behavior:smooth;
+}
 
 .container-fluid{
     height: 100vh;

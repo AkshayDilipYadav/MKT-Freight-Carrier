@@ -1,8 +1,523 @@
-.services{
+/* Fullscreen to card animation */
+@keyframes fullScreenToCard {
+   0% {
+       width: 100vw;
+       height: 100vh;
+       top: 0;
+       left: 0;
+       border-radius: 0;
+   }
+   100% {
+       width: 200px;
+       height: 300px;
+       top: var(--target-top); 
+       left: var(--target-left); 
+       border-radius: 20px;
+   }
+}
+
+.servicesBlock {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   background-color:  #fffffff5;
+   height: 170vh;
+   position: relative;
+   overflow: hidden;
+}
+
+.containerServices {
+   position: relative;
+   width: 100%;
+   height: 100%;
+}
+
+.slide .item {
+   position: absolute;
+   width: 100vw;
    height: 100vh;
-   position: relative; 
-    
+   top: 0;
+   left: 0;
+   background-size: cover;
+   background-position: center;
+   
+   opacity: 0;
+   transition: all 0.5s ease;
+}
+
+.slide .item.active {
+   animation: fullScreenToCard 0.5s forwards;
+  
+   opacity: 1;
 }
 
 
 
+/* After becoming cards */
+
+
+
+.item.card {
+   
+   width: 200px;
+   height: 300px;
+   top: var(--target-top);
+   left: var(--target-left);
+   transform: scale(1);
+   
+}
+
+
+.nameOurServices{
+   position: absolute;
+   top: 0%; 
+   left: 45%; 
+   transform: translate(10%, -15%);
+   font-size: 100px;
+   color:rgb(255, 251, 0);
+   text-shadow: 
+     1px 1px 2px black, /* Outer shadow for depth */
+     2px 2px 4px rgba(0, 0, 0, 0.5); 
+}
+.image {
+   position: relative;
+  
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   padding: 20px; /* Adjust padding to prevent text from touching the edges */
+   border-radius: 10px; /* Optional for rounded corners */
+z-index: -10; }
+ 
+ .content1 {
+ z-index: 9999;
+   position: absolute;
+   inset: 0; /* Ensures content covers the entire image area */
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+   padding: 5px;
+   color: rgb(255, 255, 255);
+   background-color: rgba(0, 0, 0, 0); /* Semi-transparent black background */
+   border-radius: 10px; /* Match the image's border radius for seamlessness */
+ }
+
+ .name1, .name2, .name3, .des1, .des2, .des3 {
+   z-index: 9999; /* Higher than any other element */
+   position: fixed; /* Ensures they stay on top regardless of scrolling or zooming */
+   pointer-events: none; /* Optional: Prevent interactions */
+}
+
+.image {
+   width: 300px;
+   height: 300px;
+}
+.name1, .name2, .name3, .name4, .name6, .name7, .name5 {
+   font-size: 60px;
+   padding: 2%;
+}
+.des1, .des2, .des3, .des4, .des6, .des7, .des5 {
+   font-size: 19px;
+   padding: 10px;
+   margin-top: 10px;
+}
+ 
+ .name1 {
+
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+  
+
+   position: absolute;
+   top: -7%; 
+   left: -4%; 
+   transform: translate(0%, 0%);
+
+   padding: 2%;
+
+   background-color:#1850a0;
+   color: rgb(251, 255, 0);
+
+   font-weight: bold;
+   margin-bottom: 10px;
+   
+   text-shadow: 
+     1px 1px 2px black, /* Outer shadow for depth */
+     2px 2px 4px rgba(0, 0, 0, 0.5); /* Additional shadow for a 3D look */
+   /* 3D effect with slight depth */
+ }
+ 
+ .des1 {
+  
+
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+   
+   position: absolute;
+   top: 0%; 
+   left: 0%; 
+   
+   transform: translate(100%, -4%);
+
+   background-color: #ffffff;
+   color: rgb(0, 0, 0);
+
+
+   line-height: 1.5;
+   
+   /* Subtle shadow for readability */
+   margin-top: 10px;
+ }
+ 
+
+ .name2 {
+
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+font-size: 31px;
+   position: absolute;
+   top: -10%; 
+   left: -5%; 
+   transform: translate(0%, 0%);
+
+   padding: 2%;
+  
+   background-color:#1850a0;
+   color: rgb(251, 255, 0);
+
+   
+   font-weight: bold;
+   margin-bottom: 10px;
+   
+   text-shadow: 
+     1px 1px 2px black, /* Outer shadow for depth */
+     2px 2px 4px rgba(0, 0, 0, 0.5); /* Additional shadow for a 3D look */
+   /* 3D effect with slight depth */
+ }
+ 
+ .des2 {
+
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+   position: absolute;
+  
+   top: 0%; 
+   left: 0%; 
+   
+   transform: translate(100%, -12%);
+
+    background-color: #ffffff;
+   color: rgb(0, 0, 0);
+
+
+   line-height: 1.5;
+   
+  
+   margin-top: 10px;
+ }
+ 
+ .name3{
+
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+   position: absolute;
+   top: -5%; 
+   left: -12%; 
+   transform: translate(0%, 0%);
+
+   
+   padding: 2%;
+  
+   background-color:#1850a0;
+   color: rgb(251, 255, 0);
+
+   
+   font-weight: bold;
+   margin-bottom: 10px;
+   
+   text-shadow: 
+     1px 1px 2px black, /* Outer shadow for depth */
+     2px 2px 4px rgba(0, 0, 0, 0.5); /* Additional shadow for a 3D look */
+   
+ }
+
+ .des3{
+
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+   position: absolute;
+  
+   top: 0%; 
+   left: 0%; 
+   
+   transform: translate(0%, 140%);
+
+    background-color: #ffffff;
+   color: rgb(0, 0, 0);
+
+
+   line-height: 1.5;
+   
+  
+   margin-top: 10px;
+ }
+
+ .name4{
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+   
+   font-size: 45px;
+  
+
+   position: absolute;
+   top: -13%; 
+   left: -10%; 
+   transform: translate(0%, 0%);
+
+ 
+   padding: 2%;
+
+   background-color:#1850a0;
+   color: rgb(251, 255, 0);
+
+   font-weight: bold;
+   margin-bottom: 10px;
+   
+   text-shadow: 
+     1px 1px 2px black, /* Outer shadow for depth */
+     2px 2px 4px rgba(0, 0, 0, 0.5); 
+ }
+
+ .des4{
+
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+ 
+   
+   position: absolute;
+   top: 0%; 
+   left: 0%; 
+   
+   transform: translate(100%, -20%);
+
+   background-color: #ffffff;
+   color: rgb(0, 0, 0);
+
+font-size: 19px;
+   line-height: 1.3;
+   
+   /* Subtle shadow for readability */
+   margin-top: 10px;
+ }
+
+
+
+ .name6{
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+ 
+
+   position: absolute;
+   top: -7%; 
+   left: -8%; 
+   transform: translate(0%, 0%);
+
+   
+   padding: 2%;
+
+   background-color:#1850a0;
+   color: rgb(251, 255, 0);
+
+   font-weight: bold;
+   margin-bottom: 10px;
+   
+   text-shadow: 
+     1px 1px 2px black, /* Outer shadow for depth */
+     2px 2px 4px rgba(0, 0, 0, 0.5); 
+ }
+
+ .des6{
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+ font-size: 20px;
+   
+   position: absolute;
+   top: 40%; 
+   left: 0%; 
+   
+   transform: translate(0%, 80%);
+
+   background-color: #ffffff;
+   color: rgb(0, 0, 0);
+
+
+   line-height: 1.5;
+   
+   /* Subtle shadow for readability */
+   margin-top: 10px;
+ }
+
+ .name7{
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+ 
+
+   position: absolute;
+   top: -10%; 
+   left: -29%; 
+   transform: translate(0%, 0%);
+
+ 
+   padding: 2%;
+
+   background-color:#1850a0;
+   color: rgb(251, 255, 0);
+
+   font-weight: bold;
+   margin-bottom: 10px;
+   
+   text-shadow: 
+     1px 1px 2px black, /* Outer shadow for depth */
+     2px 2px 4px rgba(0, 0, 0, 0.5); 
+ }
+
+ .des7{
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+   font-size: 20px;
+     
+     position: absolute;
+     top: -15%; 
+     left: 0%; 
+     
+     transform: translate(100%, 0%);
+  
+     background-color: #ffffff;
+     color: rgb(0, 0, 0);
+  
+  
+     line-height: 1.5;
+     
+     /* Subtle shadow for readability */
+     margin-top: 10px;
+ }
+
+ .name5{
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+ 
+
+   position: absolute;
+   top: -10%; 
+   left: -9%; 
+   transform: translate(0%, 0%);
+
+   
+   padding: 2%;
+
+   background-color:#1850a0;
+   color: rgb(251, 255, 0);
+
+   font-weight: bold;
+   margin-bottom: 10px;
+   
+   text-shadow: 
+     1px 1px 2px black, /* Outer shadow for depth */
+     2px 2px 4px rgba(0, 0, 0, 0.5); 
+ }
+ .des5{
+   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.849);
+
+   font-size: 20px;
+     
+     position: absolute;
+     top: -6%; 
+     left: 0%; 
+     
+     transform: translate(100%, 0%);
+  
+     background-color: #ffffff;
+     color: rgb(0, 0, 0);
+  
+  
+     line-height: 1.5;
+     
+     /* Subtle shadow for readability */
+     margin-top: 10px;
+ }
+
+
+ @media (max-width: 1200px) {
+   .image {
+       width: 250px;
+       height: 250px;
+   }
+   .name1, .name2, .name3 {
+       font-size: 50px;
+   }
+   .des1, .des2, .des3 {
+       font-size: 16px;
+   }
+}
+
+/* For tablets (landscape) */
+@media (max-width: 992px) {
+   .image {
+       width: 200px;
+       height: 200px;
+   }
+   .name1, .name2, .name3 {
+       font-size: 40px;
+   }
+   .des1, .des2, .des3 {
+       font-size: 14px;
+   }
+}
+
+/* For tablets (portrait) and large phones */
+@media (max-width: 768px) {
+   .image {
+       width: 180px;
+       height: 180px;
+   }
+   .name1, .name2, .name3 {
+       font-size: 35px;
+   }
+   .des1, .des2, .des3 {
+       font-size: 12px;
+   }
+}
+
+/* For large phones */
+@media (max-width: 576px) {
+   .image {
+       width: 150px;
+       height: 150px;
+   }
+   .name1, .name2, .name3 {
+       font-size: 30px;
+       padding: 1%;
+   }
+   .des1, .des2, .des3 {
+       font-size: 10px;
+       padding: 5px;
+   }
+}
+
+/* For small phones */
+@media (max-width: 320px) {
+   .image {
+       width: 120px;
+       height: 120px;
+   }
+   .name1, .name2, .name3 {
+       font-size: 25px;
+       padding: 1%;
+   }
+   .des1, .des2, .des3 {
+       font-size: 8px;
+       padding: 2px;
+   }
+}
