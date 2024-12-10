@@ -8,11 +8,11 @@ header{
     left: 0;
     z-index: 10;
     font-family: monospace;
-    
+   
     visibility: hidden;
     transition: opacity 1s ease, visibility 1s ease;
     animation: fadeIn 1s forwards;
-    animation-delay: 5s; 
+    animation-delay: 0.1s; 
 }
 @keyframes fadeIn {
     0% {
@@ -67,7 +67,7 @@ transition: background-color 0.3s ease;
     width: 10%;
     height: 1px;
     
-    transition: width 0.3s ease;
+    transition: width 0.25s ease;
 }
 
 .navbar .nav-link:hover::after{
@@ -75,6 +75,82 @@ transition: background-color 0.3s ease;
     width: 60%;
 }
 
+.headerLogoName{
+    display: grid;
+    
+    justify-content: center; 
+    height: 400px;
+    transform: translateY(200px); 
+    transition: transform 1s ease;
+    font-family: "Josefin Sans";
+}
+.headerName h1 {
+    display: flex; /* Flexbox layout for alignment */
+    flex-direction: column; /* Stack spans vertically */
+    justify-content: center; /* Center the spans vertically */
+    align-items: center; /* Center the spans horizontally */
+    height: 100%; /* Ensure h1 takes up full height (if needed) */
+}
+.headerLogoName.stopped {
+    transform: translateY(0);
+}
+.headerName {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(50px); /* Positioned below */
+    transition: opacity 1s ease, transform 1s ease; /* Smooth transition for appearance */
+}
+
+/* Visible state for headerName */
+.headerName.visible {
+    opacity: 1;
+    transform: translateY(0); /* Moves into place */
+}
+.headerName{
+    margin-top: 100px;
+    display: flex; /* Flex layout ensures horizontal alignment */
+    justify-content: center; /* Centers the text horizontally */
+    gap: 10px; /* Adds spacing between letters */
+    font-size: 36px;
+    font-weight: bold;
+ 
+}
+.headerName span {
+    display: block; 
+    /* Ensures each letter is treated as a block */
+  }
+.logo{
+    display: block;
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    border-radius: 10px;
+  
+}
+
+.impButtons{
+    position: relative;
+    display: inline-block;
+   
+}
+button {
+    position: relative;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .getAQuoteContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: scale(0); /* Start as a point */
+    background-color: aqua;
+    width: 400px;
+    height: 600px;
+    /* Make it start as a circular point */
+    transition: transform 0.4s ease-out, left 0.4s ease-out; /* Smooth transition */
+    z-index: 0; /* Appear below the button */
+  }
 
 /**
 .body{

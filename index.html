@@ -6,7 +6,7 @@
     <title>MKT FREIGHT CARRIER</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Doto:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Lobster&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="topPanel.css">
+
     <link rel="stylesheet" href="ourservices.css">
     <link rel="stylesheet" href="scroll.css">
 
@@ -14,30 +14,33 @@
 
 </head>
 <body>
-    <div class="topsection" id="edit-section">
-        <h2>Edit your content Here</h2>
-        <p>You can add a form or any other content in this section.</p>
-
-
-        <div class="rectangle">
-
-          
-
-        </div>
-
-    <div class="rectangleRight">
-        <div class="edit-button section" id="home">
-            <button onclick="scrollToEdit()">Get a Quote</button>
-            <button onclick="scrollToTop()">Go Back to Top</button>
-          </div>
-    </div>
-
-
-    </div>
-
 
 
     <header>
+
+      <div class="headerLogoName">
+
+        <div class="logo"
+        style="background-image: url(imageFolder/logo.jpg);"
+    >
+    <div class="headerName">
+        <h1>
+            <span>M</span>
+            <span>K</span>
+            <span>T</span>
+        </h1>
+    </div>
+</div>
+
+
+
+      </div>
+
+      <div class="impButtons">
+        <button id="quoteButton">Get a Quote</button>
+        <div class="getAQuoteContainer"></div>
+      </div>
+
         <nav class="navbar">
             <ul>
                 <li><a href="#section1" class="nav-link">TOP FOLD</a></li>
@@ -122,7 +125,7 @@
     
     <section id="section2">
         
-<div class="servicesBlock">
+<div class="servicesBlock backgroundServices">
     <div class="nameOurServices">
         <h3>OUR SERVICES</h3>
     </div>
@@ -136,8 +139,8 @@
             <div class="image"
             style="background-image: url(imageFolder/logistics.jpg);">
             <div class="content1 ">
-                <div class="name1">LOGISTICS</div>
-                <div class="des1">
+                <div class="name1 ">LOGISTICS</div>
+                <div class="des1 ">
                     <p>
                         We can arrange rental trucks for full truckloads (FTL) and less than truckloads (LTL). We offer vans, reefers, flatbeds, step decks and sleeper teams for any shipments that need to be expedited.
     
@@ -275,6 +278,6 @@
     <script src="ourservices.js"></script>
 <script src="scroll.js"></script>
     <script src="app.js"></script>
-    <script src="topPanel.js"></script>
+    
 </body>
 </html>
